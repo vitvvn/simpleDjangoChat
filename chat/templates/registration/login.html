@@ -1,0 +1,22 @@
+{% load i18n %}
+{% block content %}
+<div class="row">
+    <div class="col"></div>
+    <div class="col-5 bgc-db brd-t">
+        <h2>{% trans 'Log in' %}</h2>
+    </div>
+    <div class="col"></div>
+</div>
+<div class="row">
+    <div class="col"></div>
+    <div class="col-5 p-3 bgc-lb brd-b">
+        <form method="post">
+            {% csrf_token %}
+            {{ form }}
+             <button class="btn btn-outline-dark" type="submit">{% trans 'Log in' %}</button>
+        </form>
+    </div>
+    <div class="col">
+    </div>
+</div>
+{% endblock %}
